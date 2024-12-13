@@ -1,0 +1,22 @@
+<nav>
+    <input type="button" value="+ Compose" class="compose-mail">
+
+    <ul>
+        <li>
+            <img src="assets/images/inbox-solid.svg" alt="">
+            <a [routerLink]="['/inbox']" >Inbox</a>
+        </li>
+        <li>
+            <img src="assets/images/star-solid.svg" alt="">
+            <a [routerLink]="['/starred']">Starred</a>
+        </li>
+        <li>
+            <img src="assets/images/telegram-brands-solid.svg" alt="">
+            <a [routerLink]="['/sent']">Sent</a>
+        </li>
+        <li>
+            <img src="assets/images/trash-solid.svg" alt="">
+            <a [routerLink]="['/trash']">Trash</a>
+        </li>
+    </ul>
+</nav>

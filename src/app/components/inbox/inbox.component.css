@@ -1,0 +1,73 @@
+.inbox{
+    background-color: transparent;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.inbox-field{
+    margin: 2rem 0;
+    width: 95%;
+    background-color: white;
+    border-radius: 0.7rem;
+    height: max-content;
+    max-height: 800px;
+
+   
+}
+
+.inbox-header,
+ .inbox-body{
+    background-color: white;
+    border-radius: 0.7rem;
+    box-shadow: 2px 2px 3px rgb(191, 191, 191);
+}
+
+.inbox-header{
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1.5rem;
+
+}
+.inbox-header-left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.inbox-header-right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.inbox-header input{
+    width: 30px;
+    height: 30px;
+}
+.inbox-header img{
+    width: 30px;
+    cursor: pointer;
+}
+.inbox-header img:nth-child(3){
+    width: 10px;
+}
+.inbox-header-right img{
+    width: 20px;
+}
+
+
+.inbox-body{
+    max-height: 800px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    height: fit-content;
+}
