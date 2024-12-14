@@ -1,18 +1,17 @@
 <header>
     <div class="header-left">
-        <img src="assets/images/bars-solid.svg" alt="">
-        <h2>Gmail</h2>
+      <img src="assets/images/bars-solid.svg" alt="">
+      <h2>Gmail</h2>
     </div>
-
+  
     <div class="header-search">
-        <input type="text" placeholder="Search Mail">
-        <img src="assets/images/magnifying-glass-solid.svg" alt="">
+      <input type="text" placeholder="Search Mail">
+      <img src="assets/images/magnifying-glass-solid.svg" alt="">
     </div>
-
+  
     <div class="header-right">
-        <img src="assets/images/gear-solid.svg" alt="">
-        <div class="user-img">
-            
-        </div>
+      <img src="assets/images/bell-solid.svg" alt="" routerLink="/notifications">
+      <img class="user-img" routerLink="/profile" [src]="profilePicture">
     </div>
-</header>
+  </header>
+  

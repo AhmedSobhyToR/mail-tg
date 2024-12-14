@@ -1,0 +1,81 @@
+<div class="container mx-auto p-4">
+    <div class="bg-white shadow-md rounded-lg p-6">
+      <form [formGroup]="replyForm" class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-700" for="original-message">
+            Original Message
+          </label>
+          <div class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 bg-gray-50">
+            <p>Hi John,</p>
+            <p>Can we schedule a meeting for next week to discuss the project updates?</p>
+            <p>Best,<br />Alice</p>
+          </div>
+        </div>
+        <h2 class="text-2xl font-bold mb-4">Reply to Email</h2>
+        <div>
+          <label class="block text-sm font-medium text-gray-700" for="to">To</label>
+          <input
+            formControlName="to"
+            class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
+            id="to"
+            type="text"
+          />
+          <div *ngIf="replyForm.get('to')?.invalid && replyForm.get('to')?.touched" class="text-red-500 text-sm">
+            A valid email is required.
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700" for="cc">CC</label>
+          <input
+            formControlName="cc"
+            class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
+            id="cc"
+            type="text"
+          />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700" for="subject">Subject</label>
+          <input
+            formControlName="subject"
+            class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
+            id="subject"
+            type="text"
+          />
+          <div *ngIf="replyForm.get('subject')?.invalid && replyForm.get('subject')?.touched" class="text-red-500 text-sm">
+            Subject is required.
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700" for="reply">Your Reply</label>
+          <textarea
+            formControlName="reply"
+            class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
+            id="reply"
+            rows="6"
+          ></textarea>
+          <div *ngIf="replyForm.get('reply')?.invalid && replyForm.get('reply')?.touched" class="text-red-500 text-sm">
+            Reply content is required.
+          </div>
+        </div>
+        <div class="flex justify-end space-x-4">
+          <button
+            (click)="onSubmitReply()"
+            class="bg-blue-500 text-white px-4 py-2 rounded-md shadow-sm hover:bg-blue-600"
+            type="button"
+            [disabled]="replyForm.invalid"
+          >
+            Reply
+          </button>
+          <button
+            (click)="onSubmitReplyAll()"
+            class="bg-green-500 text-white px-4 py-2 rounded-md shadow-sm hover:bg-green-600"
+            type="button"
+            [disabled]="replyForm.invalid"
+          >
+            Reply All
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
